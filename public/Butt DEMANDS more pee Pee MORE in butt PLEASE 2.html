@@ -1,0 +1,32 @@
+<h1 align=center> t1a10-object-array by LoganSl</h1>
+
+<script>
+
+    // Defining custom functions
+
+    function sayHello(){
+	let myObjectArray = {'age':'22','name':'Fred'};
+
+	let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+	document.getElementById('myTextArea01').value = myPrintout
+	document.getElementById('myDiv01').innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/PC7A1xHgciE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+}
+
+     
+
+    function sayHi(){
+	let myArrayObject = {'age':'22','name':'Fred'};
+
+	let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
+	document.getElementById('myTextArea01').value = myPrintout
+	document.getElementById('myDiv01').innerHTML = 'Nothing useful here'
+}
+
+    </script>
+
+<button type="button" onclick="sayHi();">Show Object Array</button>
+
+<button type="button" onclick="sayHello();">Show Array Object</button>
+
+<div id="myDiv01">...</div><br>
+<textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
