@@ -1,13 +1,18 @@
+<html id='ass'>
 <h1 align=center> t1a10-object-array by LoganSl</h1>
 
 <script>
-	
+
     function sayHello(){
 	let myObjectArray = {'age':'22','name':'Fred'};
 
 	let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
 	document.getElementById('myTextArea01').value = myPrintout
-	document.getElementById('myDiv01').innerHTML = '<iframe width="420" height="345" src="https://www.youtube.com/embed/o1Fve0D9tQQ?autoplay=1" frameborder="0" allowfullscreen></iframe>'
+	document.getElementById('myTextArea01').style.fontFamily = 'cursive, sans-serif'
+	document.getElementById('myDiv01').innerHTML = '<iframe width="420" height="345" src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" frameborder="0" allowfullscreen></iframe>'
+	document.getElementById('ass').style.backgroundColor = 'black'
+	document.getElementById('ass').style.color = 'white'
+	document.getElementById('ass').style.fontFamily = 'cursive, sans-serif'
 }
 
      
@@ -17,7 +22,11 @@
 
 	let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
 	document.getElementById('myTextArea01').value = myPrintout
+	document.getElementById('myTextArea01').style.fontFamily = 'cursive, sans-serif'
 	document.getElementById('myDiv01').innerHTML = 'Nothing useful here'
+	document.getElementById('ass').style.backgroundColor = 'white'
+	document.getElementById('ass').style.color = 'black'
+	document.getElementById('ass').style.fontFamily = 'cursive, sans-serif'
 }
 
     </script>
@@ -28,3 +37,4 @@
 
 <div id="myDiv01">...</div><br>
 <textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
+</html>
