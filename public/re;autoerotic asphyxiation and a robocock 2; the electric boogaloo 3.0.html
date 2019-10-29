@@ -1,0 +1,76 @@
+<script>
+	let myInterval
+
+	function myIsOnScreen4(){
+		if (parseInt(document.getElementById('myDiv01').style.top) < 0) {
+		document.getElementById('myDiv01').style.top = '3px'
+		}
+	}
+	function myIsOnScreen3(){
+		if (parseInt(document.getElementById('myDiv01').style.top) > 400) {
+		document.getElementById('myDiv01').style.top = '397px'
+		}
+	}
+	function myIsOnScreen2(){
+		if (parseInt(document.getElementById('myDiv01').style.left) < 0) {
+		document.getElementById('myDiv01').style.left = '3px'
+		}
+	}
+
+	function myIsOnScreen(){
+		if (parseInt(document.getElementById('myDiv01').style.left) > 400) {
+		document.getElementById('myDiv01').style.left = '397px'
+		}
+	}
+
+</script>
+
+<body onkeydown="{
+
+	let myKey = event.key
+       //	let myKey = String.toLowerCase(event.key)
+
+	if (myKey == 'd') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.left =
+		parseInt(document.getElementById('myDiv01').style.left) + 3
+	myIsOnScreen()
+	} ,20)
+}
+	if (myKey == 's') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.top =
+		parseInt(document.getElementById('myDiv01').style.top) + 3
+	myIsOnScreen3()
+	} ,20)
+}
+	if (myKey == 'a') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.left =
+		parseInt(document.getElementById('myDiv01').style.left) + -3
+	myIsOnScreen2()
+	} ,20)
+}
+	if (myKey == 'w') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.top =
+		parseInt(document.getElementById('myDiv01').style.top) + -3
+	myIsOnScreen4()
+	} ,20)
+}
+}">
+
+<h1 align=center>t1a13-onkeydown-LoganSl</h1>
+Get WASD working, what about a second object controlled by arrows or IJKL<br>
+
+<div id="myDiv01" style="position:absolute; left:200; top:200; ">Logan</div>
+
+</body>
