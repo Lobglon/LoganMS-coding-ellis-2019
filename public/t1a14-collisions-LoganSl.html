@@ -1,10 +1,37 @@
 <h2 align=center>t1a14 Collisions by LoganSl </h2>
 
 <script>
+function piss1(){
+   document.getElementById('myImg01').style.left = 
+      parseInt(document.getElementById('myImg01').style.left) + -10
+   if ( myHitOther('myImg01','myImg02','myImg03','myImg04','myImg05') ){
+       alert('you lose')
+       window.location.replace("https://youtu.be/7c83uouDPQA")
+      document.getElementById('myImg01').style.left = '20px'
+   }
+}
+function piss2(){
+   document.getElementById('myImg01').style.top = 
+      parseInt(document.getElementById('myImg01').style.top) + -10
+   if ( myHitOther('myImg01','myImg02','myImg03','myImg04','myImg05') ){
+       alert('you lose')
+       window.location.replace("https://youtu.be/7c83uouDPQA")
+      document.getElementById('myImg01').style.top = '20px'
+   }
+}
+function piss3(){
+   document.getElementById('myImg01').style.top = 
+      parseInt(document.getElementById('myImg01').style.top) + 10
+   if ( myHitOther('myImg01','myImg02','myImg03','myImg04','myImg05') ){
+       alert('you lose')
+       window.location.replace("https://youtu.be/7c83uouDPQA")
+      document.getElementById('myImg01').style.top = '20px'
+   }
+}
 function piss(){
    document.getElementById('myImg01').style.left = 
       parseInt(document.getElementById('myImg01').style.left) + 10
-   if ( myHitOther('myImg01','myImg02') ){
+   if ( myHitOther('myImg01','myImg02','myImg03','myImg04','myImg05') ){
        alert('you lose')
        window.location.replace("https://youtu.be/7c83uouDPQA")
       document.getElementById('myImg01').style.left = '20px'
@@ -35,3 +62,9 @@ function myHitOther(my1,my2){
 
 
 <input type=button value="go Right"  onclick="piss();">
+
+<input type=button value="go Left"  onclick="piss1();">
+
+<input type=button value="go Up"  onclick="piss2();">
+
+<input type=button value="go Down"  onclick="piss3();">
