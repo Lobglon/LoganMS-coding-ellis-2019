@@ -1,4 +1,5 @@
 <script>
+
 	let myInterval
 
 	function myIsOnScreen4(){
@@ -23,12 +24,33 @@
 		}
 	}
 
+	function piss4(){
+		if (parseInt(document.getElementById('piss').style.top) < 400) {
+		document.getElementById('piss').style.top = '393px'
+		}
+	}
+	function piss3(){
+		if (parseInt(document.getElementById('piss').style.top) > 600) {
+		document.getElementById('piss').style.top = '597px'
+		}
+	}
+	function piss2(){
+		if (parseInt(document.getElementById('piss').style.left) < 400) {
+		document.getElementById('piss').style.left = '393px'
+		}
+	}
+
+	function piss(){
+		if (parseInt(document.getElementById('piss').style.left) > 800) {
+		document.getElementById('piss').style.left = '797px'
+		}
+	}
+
 </script>
 
 <body onkeydown="{
 
 	let myKey = event.key
-       //	let myKey = String.toLowerCase(event.key)
 
 	if (myKey == 'd') {
 	clearInterval(myInterval)
@@ -66,10 +88,46 @@
 	myIsOnScreen4()
 	} ,20)
 }
+if (myKey == 'D') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('piss').style.left =
+		parseInt(document.getElementById('piss').style.left) + 3
+	piss()
+	} ,20)
+}
+	if (myKey == 'S') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('piss').style.top =
+		parseInt(document.getElementById('piss').style.top) + 3
+	piss3()
+	} ,20)
+}
+	if (myKey == 'A') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('piss').style.left =
+		parseInt(document.getElementById('piss').style.left) + -3
+	piss2()
+	} ,20)
+}
+	if (myKey == 'W') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('piss').style.top =
+		parseInt(document.getElementById('piss').style.top) + -3
+	piss4()
+	} ,20)
+}
 }">
 
-<h1 align=center>t1a13-onkeydown-LoganSl</h1>
-Get WASD working, what about a second object controlled by arrows or IJKL<br>
+<h1 id="piss" style="position:absolute; left:500; top:35; ">t1a13-onkeydown-LoganSl</h1>
+I got it to work with capslock lol. Try it out<br>
 
 <div id="myDiv01" style="position:absolute; left:200; top:200; ">Logan</div>
 
